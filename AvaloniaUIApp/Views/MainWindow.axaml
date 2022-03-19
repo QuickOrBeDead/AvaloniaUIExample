@@ -12,6 +12,16 @@
         <vm:MainWindowViewModel/>
     </Design.DataContext>
 
-    <TextBlock Text="{Binding Greeting}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+  <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+      <TextBlock Text="{Binding Title}" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+      <StackPanel Orientation="Horizontal">
+          <TextBlock FontWeight="Bold">Temperature: </TextBlock>
+          <TextBlock Text="{Binding Temperature}"></TextBlock>
+      </StackPanel>
+      <StackPanel Orientation="Horizontal">
+          <TextBlock FontWeight="Bold">Conditions: </TextBlock>
+          <TextBlock Text="{Binding Conditions}"></TextBlock>
+      </StackPanel>
+  </StackPanel>
 
 </Window>
